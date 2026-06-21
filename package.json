@@ -1,0 +1,24 @@
+{
+  "name": "playwright-assignment-yash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "test:cucumber": "playwright test -c playwright.cucumber.config.ts && node scripts/generate-cucumber-report.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.0",
+    "cucumber-html-reporter": "^7.2.0",
+    "multiple-cucumber-html-reporter": "^4.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}

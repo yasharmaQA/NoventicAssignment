@@ -1,0 +1,89 @@
+Practice Test Automation - Login Functional Test Cases
+URL: https://practicetestautomation.com/practice-test-login/
+
+Total Test Cases: 10
+- Positive: 5
+- Negative: 5
+
+Legend:
+- [AUTOMATED] Covered in Playwright automation
+- [MANUAL] Documented functional case (not currently automated)
+
+Positive Test Cases
+1. [AUTOMATED] Valid login with correct username and password
+   Steps:
+   - Open login page
+   - Enter username: student
+   - Enter password: Password123
+   - Click Submit
+   Expected Result:
+   - Redirect to /logged-in-successfully/
+   - Success heading is visible
+   - Success message is visible
+   - Log out button is visible
+
+2. [MANUAL] Successful login URL validation
+   Steps:
+   - Perform valid login
+   Expected Result:
+   - Browser URL contains practicetestautomation.com/logged-in-successfully/
+
+3. [MANUAL] Successful login message content validation
+   Steps:
+   - Perform valid login
+   Expected Result:
+   - Page contains text with Congratulations and successfully logged in
+
+4. [MANUAL] Log out button availability after successful login
+   Steps:
+   - Perform valid login
+   Expected Result:
+   - Log out button is displayed and enabled
+
+5. [MANUAL] Submit button triggers authentication action
+   Steps:
+   - Enter valid credentials
+   - Click Submit
+   Expected Result:
+   - Authentication flow starts and user lands on success page
+
+Negative Test Cases
+6. [AUTOMATED] Invalid username with valid password
+   Steps:
+   - Enter username: incorrectUser
+   - Enter password: Password123
+   - Click Submit
+   Expected Result:
+   - Error message shown: Your username is invalid!
+
+7. [AUTOMATED] Valid username with invalid password
+   Steps:
+   - Enter username: student
+   - Enter password: incorrectPassword
+   - Click Submit
+   Expected Result:
+   - Error message shown: Your password is invalid!
+
+8. [AUTOMATED] Empty username and empty password
+   Steps:
+   - Leave username blank
+   - Leave password blank
+   - Click Submit
+   Expected Result:
+   - Error message shown: Your username is invalid!
+
+9. [MANUAL] Empty username with valid password
+   Steps:
+   - Leave username blank
+   - Enter password: Password123
+   - Click Submit
+   Expected Result:
+   - Error message shown: Your username is invalid!
+
+10. [MANUAL] Valid username with empty password
+    Steps:
+    - Enter username: student
+    - Leave password blank
+    - Click Submit
+    Expected Result:
+    - Error message shown: Your password is invalid!

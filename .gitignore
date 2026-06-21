@@ -1,0 +1,12 @@
+node_modules/
+pw-report/
+playwright-report/
+test-results/
+cucumber-report/
+.DS_Store
+.vscode/
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+coverage/
